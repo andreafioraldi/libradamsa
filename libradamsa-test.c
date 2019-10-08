@@ -26,7 +26,7 @@ void write_output(char *data, size_t len, int num) {
    char path[32];
    int fd;
    int wrote;
-   sprintf(path, "tmp/lib-%d.fuzz", num); 
+   sprintf(path, "/tmp/libradamsa-%d.fuzz", num); 
    fd = open(path, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
    printf("Opened %s -> %d\n", path, fd);
    if (fd < 0) {
